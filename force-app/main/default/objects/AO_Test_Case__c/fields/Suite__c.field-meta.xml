@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suite__c</fullName>
+    <label>Test Suite</label>
+    <type>MasterDetail</type>
+    <referenceTo>AO_Test_Suite__c</referenceTo>
+    <relationshipName>Test_Cases</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

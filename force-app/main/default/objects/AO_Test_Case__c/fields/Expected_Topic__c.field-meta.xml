@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Topic__c</fullName>
+    <label>Expected Topic</label>
+    <description>Topic (subagent) the agent must route to. Blank means not checked.</description>
+    <type>Text</type>
+    <length>80</length>
+</CustomField>

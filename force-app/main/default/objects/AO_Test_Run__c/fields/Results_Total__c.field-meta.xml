@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Results_Total__c</fullName>
+    <label>Results</label>
+    <type>Summary</type>
+    <summaryForeignKey>AO_Test_Result__c.Run__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+</CustomField>

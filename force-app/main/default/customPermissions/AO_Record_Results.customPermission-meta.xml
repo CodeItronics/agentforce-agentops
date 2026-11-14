@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Record AgentOps Test Results</label>
+    <description>Allows the Record Test Result action to write scored results. Nobody edits results directly.</description>
+    <isLicensed>false</isLicensed>
+</CustomPermission>

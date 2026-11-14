@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pass_Rate__c</fullName>
+    <label>Pass Rate</label>
+    <type>Percent</type>
+    <precision>5</precision>
+    <scale>1</scale>
+    <formula>IF(Results_Total__c = 0, NULL, Results_Passed__c / Results_Total__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>AgentOps User</label>
+    <description>Author suites and cases, open runs, record results through the evaluator and summarise runs. Results are read-only: only the Record Test Result action writes them.</description>
+    <classAccesses><apexClass>AO_Support</apexClass><enabled>true</enabled></classAccesses>
+    <classAccesses><apexClass>AO_Evaluator</apexClass><enabled>true</enabled></classAccesses>
+    <classAccesses><apexClass>AO_RecordTestResult</apexClass><enabled>true</enabled></classAccesses>
+    <classAccesses><apexClass>AO_SummariseRun</apexClass><enabled>true</enabled></classAccesses>
+    <customPermissions><enabled>true</enabled><name>AO_Record_Results</name></customPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Suite__c.Agent__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Suite__c.Description__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Utterance__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Expected_Action__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Expected_Topic__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Expected_Outcome__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Must_Not_Do__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Case__c.Tags__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Run__c.Agent_Version__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Run__c.Started_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>AO_Test_Run__c.Finished_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Run__c.Results_Total__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Run__c.Results_Passed__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Run__c.Pass_Rate__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Observed_Actions__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Observed_Topic__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Observed_Outcome__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Passed__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Failure_Category__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Failure_Detail__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AO_Test_Result__c.Result_Key__c</field><readable>true</readable></fieldPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>AO_Test_Suite__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>AO_Test_Case__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>AO_Test_Run__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>AO_Test_Result__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+</PermissionSet>

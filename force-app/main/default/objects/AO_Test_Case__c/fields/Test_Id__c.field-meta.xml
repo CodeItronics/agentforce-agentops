@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Id__c</fullName>
+    <label>Test Id</label>
+    <description>Stable business key, e.g. CR-AUTH-01. The harness records results against it.</description>
+    <type>Text</type>
+    <length>40</length>
+    <required>true</required>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Outcome__c</fullName>
+    <label>Expected Outcome</label>
+    <description>Contract outcome the expected action must return, e.g. SUCCESS or NOT_FOUND. Blank means not checked.</description>
+    <type>Text</type>
+    <length>40</length>
+</CustomField>
