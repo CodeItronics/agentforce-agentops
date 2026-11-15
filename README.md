@@ -111,6 +111,24 @@ baselines, regressions, skipped cases and mandatory tags. All 21 pass; coverage 
 Known gaps: test ids are not enforced unique within a suite, and a user with the permission set can reopen a closed run
 by clearing its finish time.
 
+## CI
+
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`:
+
+1. **Lint**: `prettier --check` on the Apex classes and triggers.
+2. **Apex tests**: signs in to a Dev Hub with a JWT connected app, creates a one-day scratch org from
+   `config/project-scratch-def.json`, deploys, runs `RunLocalTests` with coverage, then deletes the org.
+
+The Apex job is skipped until these are set (at the GitHub organisation level, so all three POC repos share them):
+
+| Name | Kind | Value |
+|------|------|-------|
+| `SF_DEVHUB_USERNAME` | variable | Dev Hub username |
+| `SF_CONSUMER_KEY` | secret | connected app consumer key |
+| `SF_JWT_KEY` | secret | private key (`server.key`) matching the app's certificate |
+
+Each run uses one scratch org slot while it runs, so it fails if every active slot is taken.
+
 ## License
 
 MIT
